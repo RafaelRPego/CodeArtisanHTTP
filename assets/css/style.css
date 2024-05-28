@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/*Inter*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/*poppins*/
+
+:root{
+
+    /*paleta*/
+
+    --main-color: rgb(232, 213, 181);
+    --component-color-1:rgb(149, 139, 182);
+    --component-color-2: rgb(54, 52, 159);
+    --white-color:rgb(252, 247, 255);
+    --background-color:rgb(247, 247, 248);
+    
+    /* tipografia principal*/
+
+    --body-font: 'inter', sans-serif;
+    --title-font:'Poppins', sans-serif;
+    --title-size-large: 2.5rem;
+    --title-size-medium: 1.5rem;
+    --body-size-large: 1.125rem;
+    --body-size-normal: 1rem;
+    --body-size-small: 0.875rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--title-font);
+    color: var(--component-color-2);
+    line-height: 130%;
+}
+
+p,
+a,
+span {
+    font-family: var(--body-font);
+    line-height: 140%;
+}
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 26px;
+    justify-content:center;
+    justify-items: center;
+}
+
+.product-card{
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 7px;
+    overflow: hidden;
+    width: 350px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.986);
+    position: relative;
+}
+
+.product-card img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.details{
+    padding: 0.625rem;
+}
+.details h2{
+    font-size: 1.25rem;
+}
+
+.product-card .details p{
+    color: var(--component-color-1);
+}
+
+.product-card .details .price{
+    font-weight: 750;
+    color: var(--component-color-2);
+}
+
+.product-card .edit-btn,
+.product-card .delete-btn{
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background-color: var(--main-color);
+   color: var(--component-color-1);
+   border: none;
+   border-radius: 7px;
+   width: 20px;
+   height: 20px;
+}
+
+.product-card .edit-btn{
+    right: 35px;
+    background-color: var(--component-color-1);
+    color: var(--main-color);
+}
