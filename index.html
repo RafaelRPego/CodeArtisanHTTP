@@ -13,10 +13,42 @@
 <body>
     <main>
         <header>
-            <h1>Meus Produtos</h1>
+            <h1 style="text-align: center;">Meus Produtos</h1>
         </header>
+        <form id="add-product-form">
+            <h2 style="text-align: center;">Adcionar produto</h2>
+            <input type="text" id="name" placeholder="Nome do produto" required>
+            <input type="text" id="category" placeholder="Categoria do produto" required>
+            <input type="number" id="price" placeholder="Preço do produto" required>
+            <input type="text" id="description" placeholder="Descrição do produto" required>
+            <input type="url" id="image" placeholder="Imagem do produto" required>
+            <button type="submit">Adicionar produto</button>
+        </form>
         <section id="product-list" class="product-list">
         </section>
+        <form id="edit-product-form" style="display: none;">
+            <h2 style="text-align: center;">Editar produto</h2>
+            <input type="hidden" id="edit-id" />
+            <input type="text" id="edit-name" placeholder="Nome do produto" required>
+            <input type="text" id="edit-category" placeholder="Categoria do produto" required>
+            <input type="number" id="edit-price" placeholder="Preço do produto" required>
+            <input type="text" id="edit-description" placeholder="Descrição do produto" required>
+            <input type="url" id="edit-image" placeholder="Imagem do produto" required>
+            <button type="submit">Adicionar produto</button>
+        </form>
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+              <span class="close-btn">&times;</span>
+              <h2>Edited Product</h2>
+              <div id="modal-product-details">
+                <img id="modal-image" src="" alt="Product Image" />
+                <h3 id="modal-title"></h3>
+                <h3 id="modal-category"></h3>
+                <p id="modal-description"></p>
+                <p id="modal-price"></p>
+            </div>
+        </div>
+      </div>
     </main>
     <script src="./assets/Js/main.js"></script>
 </body>
