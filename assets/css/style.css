@@ -84,9 +84,38 @@ form button {
 }
 
 
-.container{
-    max-width: 1400px;
-    margin: px;
+.nav{ 
+    height: 6rem;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 1rem;
+    background-color: var(--component-color-1);
+    border: 6px;
+    border-radius: 3px;
+}
+
+.nav__title{
+    color: var(--main-color);
+}
+
+.nav__list{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.nav__link{
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-family: var(--body-font);
+    
+}
+.nav__link:hover{
+    color: var(--white-color);
+    transition: all 0.3s ease-in-out;
 }
 
 .product-list{

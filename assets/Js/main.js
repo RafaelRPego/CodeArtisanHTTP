@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         productCard
       .querySelector(".edit-btn")
       .addEventListener("click", () => showEditForm(product));
-    productCard
+        productCard
       .querySelector(".delete-btn")
       .addEventListener("click", () => deleteProduct(product.id, productCard));
     productList.appendChild(productCard);
